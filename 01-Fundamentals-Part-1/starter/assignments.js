@@ -48,7 +48,7 @@ The above is a bug
 // var is old way
 
 //let is used to declare variables that can change later
-
+/*
 let age = 30;
 console.log(age);
 age = 31;
@@ -78,3 +78,47 @@ job = "teacher";
 // The below does not create a variable in a scope, it is bad practice.
 lastName = "Bob";
 console.log(lastName);
+*/
+// Operators lets use transform and combine values
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 2, 2 ** 3);
+
+const irstName = "Jonas";
+const lastName = "Carson";
+
+console.log(irstName + " " + lastName);
+// adds/concatonates strings together
+
+// Assignment opperators
+
+let x = 10 + 5;
+// Two operators above, + and =, the + comes beofre the equals
+
+console.log(x);
+
+x += 10;
+console.log(x);
+
+x *= 4;
+console.log(x);
+
+x++;
+console.log(x);
+
+x--;
+console.log(x);
+
+// ++ increment by 1, -- decrement by 1
+
+//comparison operators
+
+console.log(ageJonas < ageSarah);
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
