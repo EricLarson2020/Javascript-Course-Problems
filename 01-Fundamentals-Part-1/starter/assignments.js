@@ -152,6 +152,17 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 GOOD LUCK 😀
 */
 
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+HINT: Use an if/else statement 😉
+
+GOOD LUCK 😀
+*/
+
 markHeight1 = 1.69;
 markWeight1 = 78;
 johnWeight1 = 92;
@@ -215,4 +226,101 @@ if (isOldEnough) {
   console.log("Sharah is to young to learn to drive");
   const yearsLeft = 18 - age;
   console.log(`Sarah is too yourng. Wait another ${yearsLeft} years.`);
+}
+
+// The above is called a control structure.
+
+const personBirthYear = 1991;
+let century;
+if (personBirthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+// anything defined in a codeblock wont exist outsdie it
+console.log(century);
+
+if (markBMI > johnBMI) {
+  console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+} else if (johnBMI < markBMI) {
+  console.log(`John's BMI (${johnBMI} is higher than Mark's (${markBMI})!`);
+} else {
+  console.log(`John and Mark have the same BMI (${johnBMI}).`);
+}
+
+// type conversion: manually convert from one type ot another
+
+// type coversion: javascipt does the converstion for us
+//type conversion
+const inputYear = "1991";
+console.log(inputYear + 18);
+// above gives '199118
+console.log(Number(inputYear) + 18);
+// Above gives 2009
+
+console.log(Number("Hello"));
+console.log(typeof NaN);
+// NaN if you try to convert something not a number to number
+// NaN is of a number type
+
+console.log(String(23));
+// The above gives me a string
+
+// You can covert to a number or string
+
+// Type Coercion (Javascript does the conversion for us)
+
+console.log("I am " + 23 + " years old");
+// if there is an operator between string and number, the number is converted to a string
+// can also do
+console.log("I am " + String(23) + " years old");
+console.log("23" - "10" - 3);
+// Here javascript will convert the 10 and 23 to a number and subtract them
+
+console.log("23" * "2");
+//above give 46, since the multiplier needs numbers
+
+console.log("23" > "18");
+// only in the + operator are numbers converted to strings
+// For all other operators, strings are converted to numbers if applicatble
+
+let n = "1" + 1;
+// This adds on 1 to 1 giving us 11
+
+n = n - 1;
+// This subtracts 11 - 1 giving us 10
+console.log(n);
+// Thus for all + coercion the strings are added together including numbers
+
+console.log(2 + 3 + 4 + "5");
+// This gives 95
+console.log("10" - "4" - "3" - 2 + "5");
+// This gives 15
+
+// The falsy values: 0, '', undefined, null, NaN => These are all false when converted to a boolean
+// Everything else is converted to ture
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Eric"));
+console.log(Boolean(""));
+console.log(Boolean({}));
+
+// coercion via boolean
+
+const money = 0;
+if (money) {
+  console.log("Don't spend it all ;)");
+} else {
+  console.log("You should get a job");
+}
+
+// You should get a job is displayed, because money = 0 is false
+
+let height;
+
+if (height) {
+  console.log("Yay!");
+} else {
+  console.log("Height is Undefined");
 }
