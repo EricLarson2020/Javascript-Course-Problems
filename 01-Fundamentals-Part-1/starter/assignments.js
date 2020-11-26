@@ -80,6 +80,7 @@ lastName = "Bob";
 console.log(lastName);
 */
 // Operators lets use transform and combine values
+/*
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -150,6 +151,7 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 
 GOOD LUCK 😀
 */
+
 markHeight1 = 1.69;
 markWeight1 = 78;
 johnWeight1 = 92;
@@ -166,3 +168,51 @@ const johnBMI = johnWeight1 / johnHeight1 ** 2;
 var markHigherBMI = markBMI > johnBMI;
 
 console.log(markBMI, johnBMI, markHigherBMI);
+
+// template literals
+const year = 2077;
+const ericFirstName = "Eric";
+const job = "teacher";
+const birthYear = 1991;
+
+const eric =
+  "I'm " +
+  ericFirstName +
+  ", a " +
+  (year - birthYear) +
+  " years old " +
+  job +
+  "!";
+console.log(eric);
+
+// Template literals make the above easier
+
+const ericNew = `I'm ${ericFirstName}, a ${year - birthYear} year old ${job}!`;
+console.log(ericNew);
+
+console.log(`Just a regular string...`);
+
+// You can always use backticks for strings if you want
+// bad old way to do new lines
+console.log("String with \n\
+multiple \n\
+lines");
+
+console.log(`String
+multiple
+lines`);
+
+// if and else statements
+
+// Program that checks if a person can take a driver lisence test
+
+const age = 15;
+const isOldEnough = age >= 18;
+// emoji cmd control space
+if (isOldEnough) {
+  console.log("Sharah can start driving license 😜");
+} else {
+  console.log("Sharah is to young to learn to drive");
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too yourng. Wait another ${yearsLeft} years.`);
+}
