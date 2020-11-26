@@ -324,3 +324,33 @@ if (height) {
 } else {
   console.log("Height is Undefined");
 }
+
+// Equality Operators
+
+const myAge = 18;
+
+// strick equality operator
+if (myAge === 18) console.log("You just became an adult");
+/// The tripple equal show that the value is exactly on the right.
+
+// loose equality operator => these perform coercion
+if ("18" == 18) console.log("Hello");
+// avoid the loose equality operator as much as you can (introduces weird bugs)
+
+// prompt function => gets input from screen
+
+const favorite = Number(prompt("What's your favorite number"));
+console.log(favorite);
+
+if (favorite === 23) {
+  //
+  console.log("Cool! 23 is an amazing numbe!");
+} else if (favorite === 7) {
+  console.log("7 is also a cool number");
+} else {
+  console.log("Never mind it is quite lame");
+}
+
+// == and === might give different things due to the data type
+
+if (favorite !== 23) console.log("Why not 23?");
