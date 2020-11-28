@@ -424,3 +424,67 @@ if (
   console.log(`Sorry Neither team scored high enough to win
   but better luck next time`);
 }
+
+// The switch statement
+
+const day = "wednesday";
+
+switch (day) {
+  case "monday": //day === 'monday
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Perpare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend :D");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+// statements vs expressions
+
+// expression bit of code that produces a value like 3 + 4, as it creates an expression
+// 1001
+// true && false
+// The above produce a value
+
+// Statements do not give a value
+
+if (23 > 10) {
+  const str = "23 is bigger";
+}
+
+// The above does not produce a value, it simple sets a varialbe.
+
+console.log(`I'm ${2037 - 1991} years old`);
+//above is an expression (if I put an if in, javascript would ot understand as you cannot compbine a statement and expression)
+
+// conditional operator
+//ternary operator
+const age = 23;
+age >= 18 ? console.log("I like pizza") : console.log("I loke food");
+
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+// the drink2 is an expression, thus it must be defined outside of the statement if block
+
+console.log(`I like to drink ${drink}`);
+// The ternary opperator produces a value so I can put it in the string which also produces a value, the if statement wont work in that case
