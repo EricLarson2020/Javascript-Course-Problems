@@ -162,7 +162,7 @@ HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
 */
-
+/*
 markHeight1 = 1.69;
 markWeight1 = 78;
 johnWeight1 = 92;
@@ -354,3 +354,73 @@ if (favorite === 23) {
 // == and === might give different things due to the data type
 
 if (favorite !== 23) console.log("Why not 23?");
+*/
+// AND, OR, and NOT operators for boolean logic
+// Sarash has a driver liscense
+// Sarah has good vision
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+const isTired = false;
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriverLicense && hasGoodVision;
+
+if (shouldDrive && hasGoodVision && !isTired) {
+  console.log("Sharah is able to drive!");
+} else {
+  console.log("Someone else should drive");
+}
+
+console.log(hasDriverLicense || hasGoodVision || isTired);
+console.log(hasDriverLicense && hasGoodVision && isTired);
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
+
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+GOOD LUCK 😀
+
+
+*/
+let dolphin1 = 100;
+let dolphin2 = 100;
+let dolphin3 = 100;
+
+let koalas1 = 100;
+let koalas2 = 100;
+let koalas3 = 100;
+
+const dolphinAverage = (dolphin1 + dolphin2 + dolphin3) / 3;
+const koalasAverage = (koalas1 + koalas2 + koalas3) / 3;
+
+if (
+  dolphinAverage > koalasAverage &&
+  (dolphinAverage >= 100 || koalasAverage >= 100)
+) {
+  console.log(`The dolphin team won with an avage score of ${dolphinAverage}`);
+} else if (
+  koalasAverage > dolphinAverage &&
+  (dolphinAverage >= 100 || koalasAverage >= 100)
+) {
+  console.log(`The koalas team won with an average score of ${koalasAverage}`);
+} else if (
+  koalasAverage === dolphinAverage &&
+  (dolphinAverage >= 100 || koalasAverage >= 100)
+) {
+  console.log(`The two teams tied with an average score of ${dolphinAverage}`);
+} else {
+  console.log(`Sorry Neither team scored high enough to win
+  but better luck next time`);
+}
