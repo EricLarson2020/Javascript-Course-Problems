@@ -74,7 +74,7 @@ console.log(age1);
 // Arrow Functions
 
 // added in ES6
-
+/*
 const calcAge2 = function (birthYear) {
   return 2037 - birthYear;
 };
@@ -95,3 +95,42 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 console.log(yearsUntilRetirement(1991, "Jonas"));
 
 // Difference- Arrow functions do not get a disk keyword.
+*/
+
+// functions calling other functions
+
+/*
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+  const juice = `Juice with ${applePieces} pieces ofapples and ${orangePieces} pieces of oranges`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+*/
+
+// Functions Review
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    return retirement;
+  } else {
+    return -1;
+  }
+};
+// return exits the function
+console.log(yearsUntilRetirement(1991, "Jonas"));
+console.log(yearsUntilRetirement(1950, "Jonas"));
