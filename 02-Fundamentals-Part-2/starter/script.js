@@ -116,7 +116,7 @@ console.log(fruitProcessor(2, 3));
 */
 
 // Functions Review
-
+/*
 const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
@@ -128,9 +128,123 @@ const yearsUntilRetirement = function (birthYear, firstName) {
   if (retirement > 0) {
     return retirement;
   } else {
+    console.log(`${firstName} is already retired`);
     return -1;
   }
 };
 // return exits the function
+// option up arrow/down arrow moves line up or down
+// command d with multiple clicks produces multiple cursors
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1950, "Jonas"));
+
+// function declaration: can be used before declared in code
+function calcAge(birthYear) {
+  return 2037 - birthYear;
+}
+
+// function expression
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+// arrow function: no disk key_word
+const calcAge = (birthYear) => 2037 - birthYear;
+
+// function name(paramenters) {
+  here is the body
+  some sort of return statement that ends functions excutions
+}
+
+call function with function name(arguments);
+*/
+
+// Challenge Number One
+
+/*
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
+
+1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+2. Use the function to calculate the average for both teams
+3. Create a function 'checkWinner' that takes the average score of each team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
+4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+5. Ignore draws this time.
+
+TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+HINT: To calculate average of 3 values, add them all together and divide by 3
+HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
+
+GOOD LUCK 😀
+*/
+/*
+const calcAverage = (score1, score2, score3) => {
+  const average = (score1 + score2 + score3) / 3;
+  return average;
+};
+
+const avgDolhins = calcAverage(85, 54, 41);
+const avgKoalas = calcAverage(23, 34, 27);
+
+function checkWinner(avgDolhins, avgKoalas) {
+  if (avgDolhins > avgKoalas * 2) {
+    console.log(
+      `The Dolhins won with an average score of ${avgDolhins} vs ${avgKoalas}`
+    );
+  } else if (avgKoalas > avgDolhins * 2) {
+    console.log(
+      `The Koalas won with an average score of ${avgKoalas} vs ${avgDolhins}`
+    );
+  } else {
+    console.log(`No team wins`);
+  }
+}
+checkWinner(avgDolhins, avgKoalas);
+*/
+
+// Arrays
+
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+// better way
+
+const friends = [friend1, friend2, friend3];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2008, 2020);
+console.log(years);
+console.log(friends[0]);
+console.log(friends[2]);
+// length is a property
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+//expression vs statement => expression returns something
+
+friends[2] = "Jay";
+console.log(friends);
+// array is not a primative value (const only restricts primative values).
+// friends = ['Bob', 'Alice] => this is illegal
+
+const firstName = "Eric";
+const jonas = ["firstName", "Sword", 2037 - 1991, friends];
+console.log(jonas);
+
+// Exercise
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const allYears = [1990, 1967, 2002, 2010, 2018];
+const age1 = calcAge(allYears[0]);
+const age2 = calcAge(allYears[1]);
+const age3 = calcAge(allYears[allYears.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [age1, age2, age3];
+console.log(ages);
